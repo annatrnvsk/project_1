@@ -14,6 +14,8 @@ public class BaseTest {
         driver = getDriver(); //вызываем метод getDriver, внутри ктр происходит конфигурирование и создание объекта new ChromeDriver(options)
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3)); // объявление неявных ожиданий!, чтобы ожидать появления эл-та
         driver.get("https://bio-textiles.ru/");
+        //явные ожидания ставятся перед каждым эл-том, который проверяем
+
     }
 
     @AfterEach
