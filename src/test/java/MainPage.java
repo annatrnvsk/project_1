@@ -6,17 +6,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-//паттерн PageObject - выносим все веб-эл-ты и методы, связанные с бизнес-логикой стр
-// 1 Page = 1 страница (карточка продукта - другой page)
-// описывается все, что делаем на странце
-//в тесте (тест продж) пишем методы, вызывая их из мейнпедж
+// Паттерн PageObject. Суть - вынести все веб-эл-ты и методы, связанные с бизнес-логикой страницы
+// 1 Page = 1 страница сайта
+// В Page описывается все, что можно делать на странце
+// В тесте (TestProject) пишутся методы, вызываемые из MainPage
 public class MainPage {
     //WebDriver driver;
     //WebElement catalog = driver.findElement(By.xpath("//*[@class = 'sz-header-category-item ']"));
 
     // Элементы
     @FindBy(xpath = "//div[@class = 'sz-header-category-list uk-visible@l']//a[@class = 'sz-header-category-item']")
-    List<WebElement> categoryProducts; //инициализ только во время вызова
+    List<WebElement> categoryProducts; //инициализируется только во время вызова в конкретном тесте
 
     @FindBy(xpath = "//a[contains(@class, 'sz-button-sub-category')]")
     List<WebElement> subCategoryProducts;

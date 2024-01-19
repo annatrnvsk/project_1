@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class BaseTest {
-    protected WebDriver driver; //экземпляр класса - инициализируем (объявлем, что есть перменнаяч класса WebDriver)
+    protected WebDriver driver; //экземпляр класса - инициализируем (объявлем, что есть перенменная класса WebDriver)
 
     @BeforeEach
     public void setUp(){
@@ -33,6 +33,3 @@ public class BaseTest {
         return new ChromeDriver(options);
     }
 }
-
-// = присвоили значение
-//. вызываем доступные методы объекта
